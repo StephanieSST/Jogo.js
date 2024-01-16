@@ -1,42 +1,50 @@
-// Instruções para entrega
-// # 3️⃣ Escrevendo as classes de um Jogo
 
-// **O Que deve ser utilizado**
+class heroi {
+    constructor (nome, idade){
+        this.nome = nome 
+        this.idade = idade
+    }
 
-// - Variáveis
-// - Operadores
-// - Laços de repetição
-// - Estruturas de decisões
-// - Funções
-// - Classes e Objetos
+    atacar(){
+        console.log(`Herói\n\nNome: ${this.nome}    |    Idade: ${this.idade}\n\nO ${tipo} atacou usando ${ataque}`)
+    }
+    
+}
+nome = prompt("Nome: ")
+idade = prompt("Idade: ")
+let tipoClasse = Number(prompt("Escolha um tipo de classe:\n1 - Mago\n2 - Guerreiro\n3 - Monge\n4 - Ninja"))
 
-// ## Objetivo:
 
-// Crie uma classe generica que represente um herói de uma aventura e que possua as seguintes propriedades:
+switch(tipoClasse){
+    case 1: 
+        tipo = "Mago";
+        ataque = "Magia"
+        break
 
-// - nome
-// - idade
-// - tipo (ex: guerreiro, mago, monge, ninja )
+    case 2:
+        tipo = "Guerreiro"
+        ataque = "Espada"
+        break
+        
+        case 3:
+            tipo = "Monge"
+            ataque =  "Artes Marciais"
+            break
+            
+            case 4:
+                tipo = "Ninja"
+                ataque = "Shuriken"
 
-// além disso, deve ter um método chamado atacar que deve atender os seguientes requisitos:
+                break
 
-// - exibir a mensagem: "o {tipo} atacou usando {ataque}")
-// - aonde o {tipo} deve ser concatenando o tipo que está na propriedade da classe
-// - e no {ataque} deve seguir uma descrição diferente conforme o tipo, seguindo a tabela abaixo:
+                default:
+                    alert("Erro!")
+}
+    
+let personagem = new heroi(nome, idade)
 
-// se mago -> no ataque exibir (usou magia)
-// se guerreiro -> no ataque exibir (usou espada)
-// se monge -> no ataque exibir (usou artes marciais)
-// se ninja -> no ataque exibir (usou shuriken)
+personagem.atacar()
 
-// ## Saída
 
-// Ao final deve se exibir uma mensagem:
 
-// - "o {tipo} atacou usando {ataque}"
-//   ex: mago atacou usando magia
-//   guerreiro atacou usando espada
- 
-
- 
-// Bons estudos 😉
+    
